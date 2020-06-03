@@ -1,0 +1,11 @@
+{
+    "name": "benyi/php-pipe-function",
+    "description": "An example of php pipe function implementation.",
+    "authors": [
+        {
+            "name": "Benyi",
+            "email": "banqhsia@msn.com"
+        }
+    ],
+    "require": {}
+}
