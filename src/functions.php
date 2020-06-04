@@ -3,15 +3,37 @@
 /**
  * Operator functions
  */
-$increment = function (int $number): int {
+
+/**
+ * Increases the given number by 1.
+ *
+ * @param int $number
+ * @return int
+ */
+function increment(int $number): int
+{
     return $number + 1;
 };
 
-$decrease = function (int $number): int {
+/**
+ * Decreases the given number by 1.
+ *
+ * @param int $number
+ * @return int
+ */
+function decrease(int $number): int
+{
     return $number - 1;
 };
 
-$square = function (int $number): int {
+/**
+ * Squares the given number.
+ *
+ * @param int $number
+ * @return int
+ */
+function square(int $number): int
+{
     return pow($number, 2);
 };
 
