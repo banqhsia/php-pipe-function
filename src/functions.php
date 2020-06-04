@@ -10,7 +10,7 @@
  * @param int $number
  * @return int
  */
-function increment(int $number): int
+function increase(int $number): int
 {
     return $number + 1;
 };
