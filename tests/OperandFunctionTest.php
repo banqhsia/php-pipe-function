@@ -6,6 +6,6 @@ class OperandFunctionTest extends TestCase
 {
     public function test_increment()
     {
-        $this->assertTrue(true);
+        $this->assertEquals(5, pipe(4, 'increment'));
     }
 }
