@@ -1,5 +1,7 @@
 <?php
 
+use App\Operand;
+
 /**
  * Operator functions
  */
@@ -12,7 +14,7 @@
  */
 function increase(int $number): int
 {
-    return $number + 1;
+    return Operand::increase(...func_get_args());
 };
 
 /**
@@ -23,7 +25,7 @@ function increase(int $number): int
  */
 function decrease(int $number): int
 {
-    return $number - 1;
+    return Operand::decrease(...func_get_args());
 };
 
 /**
@@ -34,7 +36,7 @@ function decrease(int $number): int
  */
 function square(int $number): int
 {
-    return pow($number, 2);
+    return Operand::square(...func_get_args());
 };
 
 /**
