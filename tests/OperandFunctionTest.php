@@ -22,15 +22,20 @@ class OperandFunctionTest extends TestCase
         $this->assertEquals(169, square(13));
     }
 
-    public function test_pipe()
+    public function test_pipe_should_call_method_step_by_setp()
     {
-        $this->assertEquals(5, pipe(4, 'increase'));
-        $this->assertEquals(6, pipe(4, 'increase', 'increase'));
+        $firstStep = function (int $number): int {
+            return $number + 10;
+        };
 
-        $this->assertEquals(3, pipe(4, 'decrease'));
-        $this->assertEquals(2, pipe(4, 'decrease', 'decrease'));
+        $secondStep = function (int $number): int {
+            return $number * 2;
+        };
 
-        $this->assertEquals(25, pipe(7, 'decrease', 'decrease', 'square'));
-        $this->assertEquals(9, pipe(4, 'decrease', 'decrease', 'increase', 'square'));
+        $expected = 40;
+        $actual = pipe(10, $firstStep, $secondStep);
+
+        $this->assertEquals($expected, $actual);
+
     }
 }
