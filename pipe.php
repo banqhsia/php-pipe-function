@@ -1,17 +1,24 @@
 <?php
 
-use App\Operands\Increment;
-
 require_once __DIR__ . "/bootstrap.php";
 
-// 49
-echo pipe(5, 'increase', 'increase', 'square');
+use App\Operands\Square;
+use App\Operands\Increment;
 
+/*****************************************************
+ * Legacy pipe function implementation.
+ ****************************************************/
+echo pipe(5, 'increase', 'increase', 'square') . PHP_EOL;
+/** 49 */
+
+/*****************************************************
+ * Chain of responsibility implementation.
+ ****************************************************/
 $increment = new Increment;
 
 $increment
     ->setNext(new Increment)
-    ->setNext(new Increment);
+    ->setNext(new Square);
 
-// 8
-echo $increment->calculate(5);
+echo $increment->calculate(5) . PHP_EOL;
+/** 49 */
