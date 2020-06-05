@@ -3,8 +3,9 @@
 namespace App\Operands;
 
 use App\Operand;
+use App\Operands\Operand as BaseOperand;
 
-class Increment extends Handler
+class Increment extends BaseOperand
 {
     /**
      * {@inheritDoc}

@@ -2,7 +2,7 @@
 
 namespace App\Operands;
 
-abstract class Handler implements Pipeable
+abstract class Operand implements Pipeable
 {
     /**
      * @var Pipeable|static
