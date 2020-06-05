@@ -26,13 +26,19 @@ abstract class Operand implements Pipeable
     }
 
     /**
+     * @param int $number
+     * @return int
+     */
+    abstract protected function process(int $int): int;
+
+    /**
      * 按照各個步驟計算結果
      *
      * @param int $number
      * @return int
      * @final
      */
-    final public function calculate(int $number):int
+    final public function calculate(int $number): int
     {
         $number = $this->process($number);
 

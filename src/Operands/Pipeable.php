@@ -18,10 +18,4 @@ interface Pipeable
      * @return bool
      */
     public function hasNext(): bool;
-
-    /**
-     * @param int $number
-     * @return int
-     */
-    public function process(int $number): int;
 }

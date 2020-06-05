@@ -10,7 +10,7 @@ class Decrement extends BaseOperand
     /**
      * {@inheritDoc}
      */
-    public function process(int $number): int
+    protected function process(int $number): int
     {
         return Operand::decrease($number);
     }
